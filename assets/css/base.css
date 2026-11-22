@@ -1,0 +1,130 @@
+/* ============================================================
+   SYBERMAD — Reset + Base + Layout primitives
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--c-text);
+  background: var(--c-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Animated mesh + grid backdrop */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--grad-mesh);
+  z-index: -2;
+  animation: meshDrift 24s ease-in-out infinite alternate;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(circle at 50% 30%, black, transparent 85%);
+  z-index: -1;
+  pointer-events: none;
+}
+@keyframes meshDrift {
+  0%   { transform: translate3d(0,0,0) scale(1); }
+  100% { transform: translate3d(0,-3%,0) scale(1.08); }
+}
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation: none; }
+}
+
+img, svg, video { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+ul, ol { list-style: none; padding: 0; }
+input, textarea, select { font: inherit; color: inherit; }
+
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: var(--lh-snug); letter-spacing: -0.02em; }
+
+::selection { background: rgba(34,211,238,.3); color: #fff; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-track { background: var(--c-bg-2); }
+::-webkit-scrollbar-thumb { background: #20303f; border-radius: 999px; border: 2px solid var(--c-bg-2); }
+::-webkit-scrollbar-thumb:hover { background: #2c4254; }
+
+/* ---- Layout ---- */
+.container { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--s-5); }
+.container--narrow { max-width: var(--maxw-narrow); }
+
+.section { padding-block: var(--s-9); position: relative; }
+.section--tight { padding-block: var(--s-8); }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: var(--s-2);
+  font-family: var(--font-display);
+  font-size: var(--fs-xs); font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--c-cyan);
+  margin-bottom: var(--s-4);
+}
+.eyebrow::before {
+  content: ""; width: 26px; height: 2px;
+  background: var(--grad-brand); border-radius: 2px;
+}
+
+.section-title { font-size: var(--fs-h2); max-width: 18ch; }
+.section-lead { color: var(--c-text-mut); font-size: var(--fs-lead); max-width: 60ch; margin-top: var(--s-4); }
+
+.gradient-text {
+  background: var(--grad-text);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+}
+
+.grid { display: grid; gap: var(--s-5); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.text-center { text-align: center; }
+.mx-auto { margin-inline: auto; }
+
+/* Accessibility helpers */
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: fixed; top: -60px; left: 16px; z-index: 200;
+  background: var(--c-cyan); color: #04121a; padding: 10px 18px;
+  border-radius: var(--r-sm); font-weight: 600; transition: top var(--t-fast);
+}
+.skip-link:focus { top: 16px; }
+
+:focus-visible {
+  outline: 2px solid var(--c-cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .section { padding-block: var(--s-8); }
+  .container { padding-inline: var(--s-4); }
+}

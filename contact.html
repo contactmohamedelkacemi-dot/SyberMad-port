@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Parlez à un expert | SyberMad</title>
+  <meta name="description" content="Contactez SyberMad : audit, démonstration, partenariat ou simple conseil. Échangez avec nos experts en cybersécurité.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#070A0F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/redesign.css">
+</head>
+<body data-page="contact" data-base="">
+  <div id="site-header-slot"></div>
+  <main id="main">
+
+    <div class="container">
+      <nav class="crumbs" aria-label="Fil d'ariane">
+        <a href="index.html" data-fr="Accueil" data-en="Home"></a><span>/</span>
+        <span aria-current="page" data-fr="Contact" data-en="Contact"></span>
+      </nav>
+    </div>
+
+    <section class="page-hero">
+      <span class="hero__orb hero__orb--2"></span>
+      <div class="container">
+        <span class="eyebrow" data-fr="Contact" data-en="Contact"></span>
+        <h1 data-fr="Parlons de votre sécurité" data-en="Let's talk about your security"></h1>
+        <p class="hero__lead" data-fr="Décrivez votre besoin en quelques lignes — nous revenons vers vous sous 24 à 48h. Un premier échange gratuit de 30 minutes pour identifier vos priorités, sans engagement." data-en="Describe your need in a few lines — we get back to you within 24 to 48 hours. A free 30-minute first exchange to identify your priorities, with no commitment."></p>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="split-layout" style="--split-ratio:1.4fr 1fr">
+
+          <!-- Form -->
+          <form class="card form-card" data-reveal="left" id="contactForm" novalidate
+                action="https://formsubmit.co/contact@sybermad.com" method="POST"
+                data-mailform data-origin="Contact">
+            <h2 style="font-size:var(--fs-h3);margin-bottom:var(--s-5)" data-fr="Écrivez-nous" data-en="Write to us"></h2>
+
+            <!-- FormSubmit routing (hidden) -->
+            <input type="hidden" name="_subject" data-subject-line value="SyberMad — Contact">
+            <input type="hidden" name="origin" value="Formulaire de contact">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+
+            <div class="grid grid-2" style="gap:var(--s-4)">
+              <div class="field"><label for="fn" data-fr="Prénom" data-en="First name"></label><input id="fn" name="fn" type="text" required autocomplete="given-name"></div>
+              <div class="field"><label for="ln" data-fr="Nom" data-en="Last name"></label><input id="ln" name="ln" type="text" required autocomplete="family-name"></div>
+            </div>
+            <div class="grid grid-2" style="gap:var(--s-4)">
+              <div class="field"><label for="email" data-fr="E-mail professionnel" data-en="Work email"></label><input id="email" name="email" type="email" required autocomplete="email"></div>
+              <div class="field"><label for="org" data-fr="Organisation" data-en="Organization"></label><input id="org" name="org" type="text" required autocomplete="organization"></div>
+            </div>
+            <div class="grid grid-2" style="gap:var(--s-4)">
+              <div class="field"><label for="phone" data-fr="Téléphone" data-en="Phone"></label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div>
+              <div class="field"><label for="role" data-fr="Fonction (facultatif)" data-en="Role (optional)"></label><input id="role" name="role" type="text" autocomplete="organization-title"></div>
+            </div>
+
+            <div class="field">
+              <label id="subjectLabel" data-fr="Sujet" data-en="Subject"></label>
+              <div class="select" data-select data-url-param="subject">
+                <input type="hidden" name="subject" value="general">
+                <button type="button" class="select__trigger" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="subjectList" aria-labelledby="subjectLabel">
+                  <span class="select__value" data-fr="Informations générales" data-en="General Information">Informations générales</span>
+                  <svg class="select__caret" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <ul class="select__list" id="subjectList" role="listbox" aria-labelledby="subjectLabel" tabindex="-1">
+                  <li class="select__option" role="option" data-value="general" aria-selected="true" data-fr="Informations générales" data-en="General Information"></li>
+                  <li class="select__option" role="option" data-value="commercial" aria-selected="false" data-fr="Demande commerciale" data-en="Commercial Request"></li>
+                  <li class="select__option" role="option" data-value="audit" aria-selected="false" data-fr="Audit & Pentest" data-en="Audit & Pentest"></li>
+                  <li class="select__option" role="option" data-value="managed" aria-selected="false" data-fr="Services de sécurité managés" data-en="Managed Security Services"></li>
+                  <li class="select__option" role="option" data-value="soc" aria-selected="false" data-fr="SOC" data-en="SOC"></li>
+                  <li class="select__option" role="option" data-value="edr" aria-selected="false" data-fr="EDR" data-en="EDR"></li>
+                  <li class="select__option" role="option" data-value="mdr" aria-selected="false" data-fr="MDR" data-en="MDR"></li>
+                  <li class="select__option" role="option" data-value="csirt" aria-selected="false" data-fr="CSIRT" data-en="CSIRT"></li>
+                  <li class="select__option" role="option" data-value="incident" aria-selected="false" data-fr="Réponse à incident" data-en="Incident Response"></li>
+                  <li class="select__option" role="option" data-value="forensics" aria-selected="false" data-fr="Investigation numérique (forensic)" data-en="Digital Forensics"></li>
+                  <li class="select__option" role="option" data-value="governance" aria-selected="false" data-fr="Gouvernance" data-en="Governance"></li>
+                  <li class="select__option" role="option" data-value="risk" aria-selected="false" data-fr="Gestion des risques" data-en="Risk Management"></li>
+                  <li class="select__option" role="option" data-value="compliance" aria-selected="false" data-fr="Conformité" data-en="Compliance"></li>
+                  <li class="select__option" role="option" data-value="iso27001" aria-selected="false" data-fr="ISO 27001" data-en="ISO 27001"></li>
+                  <li class="select__option" role="option" data-value="training" aria-selected="false" data-fr="Formation" data-en="Training"></li>
+                  <li class="select__option" role="option" data-value="awareness" aria-selected="false" data-fr="Sensibilisation" data-en="Awareness"></li>
+                  <li class="select__option" role="option" data-value="consulting" aria-selected="false" data-fr="Conseil" data-en="Consulting"></li>
+                  <li class="select__option" role="option" data-value="cameleon-detection" aria-selected="false" data-fr="Cameleon Detection" data-en="Cameleon Detection"></li>
+                  <li class="select__option" role="option" data-value="cameleon-mill" aria-selected="false" data-fr="Cameleon Mill" data-en="Cameleon Mill"></li>
+                  <li class="select__option" role="option" data-value="cameleon" aria-selected="false" data-fr="Cameleon SOC (MDR)" data-en="Cameleon SOC (MDR)"></li>
+                  <li class="select__option" role="option" data-value="partnership" aria-selected="false" data-fr="Partenariat" data-en="Partnership"></li>
+                  <li class="select__option" role="option" data-value="recruitment" aria-selected="false" data-fr="Recrutement" data-en="Recruitment"></li>
+                  <li class="select__option" role="option" data-value="press" aria-selected="false" data-fr="Presse" data-en="Press"></li>
+                  <li class="select__option" role="option" data-value="other" aria-selected="false" data-fr="Autre" data-en="Other"></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="field"><label for="msg" data-fr="Votre message" data-en="Your message"></label><textarea id="msg" name="msg" required></textarea></div>
+            <label for="consent" style="display:flex;gap:var(--s-3);align-items:flex-start;font-size:var(--fs-sm);color:var(--c-text-mut);margin-bottom:var(--s-4)">
+              <input id="consent" name="consent" type="checkbox" required style="margin-top:3px">
+              <span data-fr="J'accepte que mes informations soient utilisées pour répondre à ma demande, conformément à la politique de confidentialité." data-en="I agree that my information may be used to respond to my request, in accordance with the privacy policy."></span>
+            </label>
+            <button type="submit" class="btn btn--primary btn--lg btn--block" data-fr="Envoyer le message" data-en="Send message"></button>
+            <p data-formnote role="status" style="margin-top:var(--s-4);font-size:var(--fs-sm);color:var(--c-green);display:none" data-fr="Merci, votre message a bien été envoyé. Nous vous recontacterons sous 24 à 48h." data-en="Thank you, your message has been sent. We'll get back to you within 24 to 48 hours."></p>
+            <p data-formerror role="alert" style="margin-top:var(--s-4);font-size:var(--fs-sm);color:var(--c-red);display:none" data-fr="L'envoi a échoué. Vérifiez votre connexion et réessayez, ou écrivez-nous directement à contact@sybermad.com." data-en="Sending failed. Check your connection and try again, or email us directly at contact@sybermad.com."></p>
+          </form>
+
+          <!-- Contact info -->
+          <aside data-reveal="right" class="grid" style="gap:var(--s-4)">
+            <div class="card glass"><div class="card__icon" data-ico="mail"></div><h3 style="font-size:var(--fs-h3)" data-fr="E-mail" data-en="Email"></h3><a href="mailto:contact@sybermad.com" style="color:var(--c-cyan)">contact@sybermad.com</a><br><a href="mailto:presse@sybermad.com" style="color:var(--c-text-mut);font-size:var(--fs-sm)">presse@sybermad.com</a></div>
+            <div class="card glass"><div class="card__icon" data-ico="phone"></div><h3 style="font-size:var(--fs-h3)" data-fr="Téléphone & réactivité" data-en="Phone & responsiveness"></h3><p style="color:var(--c-text-mut)" data-fr="Du lundi au vendredi, 9h–18h. Réponse sous 24 à 48h ouvrées. Vous pouvez aussi réserver directement un créneau (Calendly)." data-en="Monday to Friday, 9am–6pm. Response within 24 to 48 working hours. You can also book a slot directly (Calendly)."></p></div>
+            <div class="card glass"><div class="card__icon" data-ico="globe"></div><h3 style="font-size:var(--fs-h3)" data-fr="Adresse" data-en="Address"></h3><p style="color:var(--c-text-mut)">Paris 12<sup>e</sup> — France</p><a href="#" style="color:var(--c-text-mut);font-size:var(--fs-sm)" aria-label="LinkedIn">LinkedIn — SyberMad</a></div>
+            <div class="card glass" style="border-color:rgba(245,165,36,.3)"><div class="card__icon" data-ico="alert" style="color:var(--c-amber);background:rgba(245,165,36,.12)"></div><h3 style="font-size:var(--fs-h3)" data-fr="Urgence / Incident" data-en="Emergency / Incident"></h3><p style="color:var(--c-text-mut)" data-fr="Une cyberattaque en cours ? Déclarez l'incident via notre formulaire dédié, sans attendre." data-en="A cyberattack in progress? Declare the incident through our dedicated form, right away."></p><a class="link-arrow" style="margin-top:var(--s-3)" href="incident.html"><span data-fr="Déclarer un incident" data-en="Declare an incident"></span><span data-ico="arrow" style="width:18px;height:18px;display:inline-flex"></span></a></div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer-slot"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="assets/js/email-config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

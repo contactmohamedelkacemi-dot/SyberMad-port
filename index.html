@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyberMad — Cybersécurité claire, concrète et humaine</title>
+    <meta name="description" content="SyberMad : conseil, audit, Cameleon SOC (SOC managé / MDR), produits Cameleon Detection & Cameleon Mill, conformité (RGPD, NIS2, DORA) et formation. Une cybersécurité claire, concrète et humaine.">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <meta name="theme-color" content="#070A0F">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/redesign.css">
+</head>
+
+<body data-page="home" data-base="">
+
+    <!-- Loading splash -->
+    <div class="splash" id="splash" aria-hidden="true">
+        <div style="text-align:center">
+            <svg class="splash__logo" viewBox="0 0 48 48"><defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#6366F1"/></linearGradient></defs><path class="sp__shield" d="M24 4 7 13v13c0 11 9 16 17 18 8-2 17-7 17-18V13z" fill="none" stroke="url(#sg)" stroke-width="2.4" stroke-linejoin="round"/><g class="sp__ring"><circle cx="24" cy="24" r="8.6" fill="none" stroke="url(#sg)" stroke-width="1" stroke-dasharray="2.25 4.5" opacity=".55"/></g><g class="sp__eye"><circle cx="24" cy="24" r="4.4" fill="none" stroke="url(#sg)" stroke-width="1.2"/><circle cx="24" cy="24" r="2.4" fill="url(#sg)"/><circle cx="23" cy="23" r=".62" fill="#EAFBFF" opacity=".95"/></g></svg>
+            <div class="splash__bar"><i></i></div>
+        </div>
+    </div>
+
+    <div id="site-header-slot"></div>
+
+    <main id="main">
+
+        <!-- ===== HERO ===== -->
+        <section class="hero">
+            <span class="hero__orb hero__orb--1"></span>
+            <span class="hero__orb hero__orb--2"></span>
+            <div class="container hero__inner">
+                <span class="chip" data-reveal="fade"><span class="badge-dot"></span><span data-fr="Cybersécurité managée · France" data-en="Managed cybersecurity · France">Cybersécurité managée · France</span></span>
+                <h1 data-reveal="up" style="margin-top:var(--s-5)" data-html data-fr='Votre cybersécurité <span class="gradient-text">managée</span>, à l’échelle de votre entreprise.' data-en='Your <span class="gradient-text">managed</span> cybersecurity, at the scale of your business.'></h1>
+                <p class="hero__lead" data-reveal="up" data-fr="SyberMad accompagne les PME, collectivités et ESN françaises pour évaluer, protéger et maintenir la sécurité de leur système d'information — avec une expertise certifiée et une approche concrète, sans jargon."
+                    data-en="SyberMad supports French SMEs, local authorities and IT-service firms to assess, protect and maintain the security of their information system — with certified expertise and a concrete, jargon-free approach."></p>
+                <div class="hero__cta" data-reveal="up">
+                    <a class="btn btn--primary btn--lg" href="contact.html?subject=commercial" data-i18n="cta_expert"></a>
+                    <a class="btn btn--ghost btn--lg" href="solutions.html" data-fr="Découvrir nos services" data-en="Discover our services"></a>
+                </div>
+                <div class="hero__statcard glass" data-stagger aria-label="Chiffres clés">
+                    <div class="hero__stat">
+                        <div class="stat__num gradient-text"><span data-count="18" data-suffix="+">0</span></div>
+                        <div class="stat__label" data-fr="ans d'expérience IT & sécurité" data-en="years of IT & security experience"></div>
+                    </div>
+                    <div class="hero__stat">
+                        <div class="stat__num gradient-text"><span data-count="4">0</span></div>
+                        <div class="stat__label" data-fr="certifications de référence" data-en="reference certifications"></div>
+                    </div>
+                    <div class="hero__stat">
+                        <div class="stat__num gradient-text"><span data-count="360" data-suffix="°">0</span></div>
+                        <div class="stat__label" data-fr="prévention → détection → réponse" data-en="prevention → detection → response"></div>
+                    </div>
+                    <div class="hero__stat">
+                        <div class="stat__num gradient-text"><span data-count="100" data-suffix="%">0</span></div>
+                        <div class="stat__label" data-fr="accompagnement post-mission" data-en="post-engagement support"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-signal" aria-hidden="true">
+                <span class="hero-signal__orbit hero-signal__orbit--outer"></span>
+                <span class="hero-signal__orbit hero-signal__orbit--inner"></span>
+                <span class="hero-signal__core"></span>
+                <span class="hero-signal__node hero-signal__node--a"></span>
+                <span class="hero-signal__node hero-signal__node--b"></span>
+                <span class="hero-signal__node hero-signal__node--c"></span>
+                <span class="hero-signal__line hero-signal__line--a"></span>
+                <span class="hero-signal__line hero-signal__line--b"></span>
+            </div>
+        </section>
+
+        <!-- ===== TRUST MARQUEE ===== -->
+        <section class="section--tight">
+            <div class="container">
+                <p class="text-center" style="color:var(--c-text-dim);font-size:var(--fs-sm);margin-bottom:var(--s-5)" data-fr="Qualifications, technologies & certifications" data-en="Qualifications, technologies & certifications"></p>
+                <div class="marquee">
+                    <div class="marquee__track">
+                        <span>ISO 27001</span><span>ISO 27005</span><span>EBIOS RM</span><span>ITIL</span><span>CCNA</span><span>Cameleon Detection®</span><span>Cameleon Mill®</span><span>Cameleon SOC®</span><span>NIS2</span><span>DORA</span><span>RGPD</span><span>OWASP</span><span>PCA/PRA</span>
+                        <span>ISO 27001</span><span>ISO 27005</span><span>EBIOS RM</span><span>ITIL</span><span>CCNA</span><span>Cameleon Detection®</span><span>Cameleon Mill®</span><span>Cameleon SOC®</span><span>NIS2</span><span>DORA</span><span>RGPD</span><span>OWASP</span><span>PCA/PRA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== LIFECYCLE SPINE ===== -->
+        <section class="section" id="approche">
+            <div class="container">
+                <div class="section-head section-head--center" data-reveal="up">
+                    <span class="eyebrow" data-fr="Notre approche" data-en="Our approach"></span>
+                    <h2 class="section-title mx-auto" data-html data-fr='La cybersécurité à <span class="gradient-text">360°</span>, pensée comme un cycle continu' data-en='Cybersecurity at <span class="gradient-text">360°</span>, designed as a continuous cycle'></h2>
+                    <p class="section-lead" data-fr="Cinq temps qui se répondent — pas une prestation isolée. Chaque étape alimente la suivante pour faire progresser durablement votre niveau de sécurité." data-en="Five phases that answer one another — not a one-off service. Each step feeds the next to durably raise your security level."></p>
+                </div>
+                <div class="spine" data-stagger style="max-width:780px;margin-inline:auto">
+                    <span class="spine__line"></span>
+                    <div class="spine__step">
+                        <div class="spine__num">01</div>
+                        <div>
+                            <h3 style="font-size:var(--fs-h3)" data-fr="Prévenir" data-en="Prevent"></h3>
+                            <p style="color:var(--c-text-mut);margin-top:6px" data-fr="Auditer, tester l'intrusion, détecter les vulnérabilités, sensibiliser les équipes." data-en="Audit, run penetration tests, detect vulnerabilities and raise team awareness."></p>
+                        </div>
+                    </div>
+                    <div class="spine__step">
+                        <div class="spine__num">02</div>
+                        <div>
+                            <h3 style="font-size:var(--fs-h3)" data-fr="Détecter" data-en="Detect"></h3>
+                            <p style="color:var(--c-text-mut);margin-top:6px" data-fr="Superviser le SI, surveiller les menaces, identifier les incidents au plus tôt." data-en="Monitor the IS, watch for threats and identify incidents as early as possible."></p>
+                        </div>
+                    </div>
+                    <div class="spine__step">
+                        <div class="spine__num">03</div>
+                        <div>
+                            <h3 style="font-size:var(--fs-h3)" data-fr="Protéger" data-en="Protect"></h3>
+                            <p style="color:var(--c-text-mut);margin-top:6px" data-fr="Durcir les configurations, sécuriser les accès (MFA), réduire la surface d'attaque." data-en="Harden configurations, secure access (MFA) and reduce the attack surface."></p>
+                        </div>
+                    </div>
+                    <div class="spine__step">
+                        <div class="spine__num">04</div>
+                        <div>
+                            <h3 style="font-size:var(--fs-h3)" data-fr="Réagir" data-en="React"></h3>
+                            <p style="color:var(--c-text-mut);margin-top:6px" data-fr="Intervenir en cas d'incident, investiguer, gérer la crise et la remédiation." data-en="Step in during incidents, investigate, manage the crisis and remediation."></p>
+                        </div>
+                    </div>
+                    <div class="spine__step">
+                        <div class="spine__num">05</div>
+                        <div>
+                            <h3 style="font-size:var(--fs-h3)" data-fr="Garantir" data-en="Guarantee"></h3>
+                            <p style="color:var(--c-text-mut);margin-top:6px" data-fr="Mettre en conformité (NIS2, RGPD, ISO 27001) et piloter la gouvernance du risque." data-en="Achieve compliance (NIS2, GDPR, ISO 27001) and steer risk governance."></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SOLUTIONS GRID ===== -->
+        <section class="section" id="solutions">
+            <div class="container">
+                <div class="section-head" data-reveal="up">
+                    <span class="eyebrow" data-fr="Nos services" data-en="Our services"></span>
+                    <h2 class="section-title" data-fr="Une réponse à chaque enjeu de sécurité" data-en="An answer to every security challenge"></h2>
+                    <p class="section-lead" data-fr="Des expertises complémentaires, mobilisables séparément ou dans une démarche globale." data-en="Complementary areas of expertise, available separately or as part of a global approach."></p>
+                </div>
+                <div class="grid grid-3" data-stagger>
+                    <a class="card" href="solutions/audit.html">
+                        <div class="card__icon" data-ico="scan"></div>
+                        <h3 data-fr="Audit & test d'intrusion" data-en="Audit & penetration testing"></h3>
+                        <p data-fr="Identifiez vos failles avant les attaquants : pentest, audit de vulnérabilités, de configuration et d'architecture." data-en="Identify your flaws before attackers do: pentest, vulnerability, configuration and architecture audits."></p>
+                    </a>
+                    <a class="card" href="solutions/gouvernance.html">
+                        <div class="card__icon" data-ico="gov"></div>
+                        <h3 data-fr="Conseil & gouvernance" data-en="Advisory & governance"></h3>
+                        <p data-fr="RSSI externalisé, analyse de risques EBIOS Risk Manager / ISO 27005, feuille de route SSI." data-en="Outsourced CISO, risk analysis with EBIOS Risk Manager / ISO 27005, security roadmap."></p>
+                    </a>
+                    <a class="card" href="solutions/gouvernance.html#conformite">
+                        <div class="card__icon" data-ico="check"></div>
+                        <h3 data-fr="Conformité NIS2 · RGPD · DORA" data-en="Compliance NIS2 · GDPR · DORA"></h3>
+                        <p data-fr="Atteignez vos obligations sereinement : diagnostic d'écart, mise en conformité, PCA/PRA." data-en="Meet your obligations with confidence: gap analysis, compliance plan, BCP/DRP."></p>
+                    </a>
+                    <a class="card" href="solutions/cameleon-soc.html">
+                        <span class="card__tag">MDR</span>
+                        <div class="card__icon" data-ico="pulse"></div>
+                        <h3>Cameleon SOC</h3>
+                        <p data-fr="Notre SOC managé (MDR) : vos protections opérées en continu — supervision, triage humain et réponse à incident incluse. Compatible Microsoft Defender & Trend Micro." data-en="Our managed SOC (MDR): your protections operated continuously — monitoring, human triage and incident response included. Compatible with Microsoft Defender & Trend Micro."></p>
+                    </a>
+                    <a class="card" href="solutions/formation.html">
+                        <div class="card__icon" data-ico="fish"></div>
+                        <h3 data-fr="Sensibilisation & phishing" data-en="Awareness & phishing"></h3>
+                        <p data-fr="Faites de vos collaborateurs votre première ligne de défense : campagnes simulées, ateliers, e-learning." data-en="Make your employees your first line of defense: simulated campaigns, workshops, e-learning."></p>
+                    </a>
+                    <a class="card" href="solutions/cameleon-soc.html#reponse">
+                        <div class="card__icon" data-ico="alert"></div>
+                        <h3 data-fr="Réponse à incident & crise" data-en="Incident response & crisis"></h3>
+                        <p data-fr="Réagir vite, limiter l'impact : qualification, investigation forensic, coordination de crise." data-en="React fast, limit impact: triage, forensic investigation, crisis coordination."></p>
+                    </a>
+                </div>
+                <div class="text-center" style="margin-top:var(--s-7)" data-reveal="fade">
+                    <a class="link-arrow" href="solutions.html"><span data-i18n="cta_all_sol"></span><span data-ico="arrow" style="display:inline-flex;width:18px;height:18px"></span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PRODUCTS SPOTLIGHT ===== -->
+        <section class="section" id="produits">
+            <div class="container">
+                <div class="grid grid-2" style="align-items:center">
+                    <div data-reveal="left">
+                        <span class="eyebrow" data-fr="Produit · Cameleon Detection®" data-en="Product · Cameleon Detection®"></span>
+                        <h2 class="section-title" data-fr="Cartographiez et corrigez vos vulnérabilités, en continu" data-en="Map and fix your vulnerabilities, continuously"></h2>
+                        <p class="section-lead" data-fr="Cameleon Detection est un scanner de vulnérabilités développé en France. Il automatise la détection des failles, hiérarchise les risques et pilote la remédiation via des tableaux de bord clairs." data-en="Cameleon Detection is a vulnerability scanner developed in France. It automates flaw detection, prioritizes risk and drives remediation through clear dashboards."></p>
+                        <ul class="feature-list" style="margin-top:var(--s-5)">
+                            <li data-fr="Scans automatisés et planifiés du système d'information" data-en="Automated, scheduled scans of your information system"></li>
+                            <li data-fr="Tableaux de bord et indicateurs de risque exploitables" data-en="Dashboards and actionable risk indicators"></li>
+                            <li data-fr="Version gratuite disponible pour démarrer" data-en="Free version available to get started"></li>
+                        </ul>
+                        <div class="hero__cta">
+                            <a class="btn btn--primary" href="solutions/produits.html#cameleon-detection" data-i18n="cta_discover"></a>
+                        </div>
+                    </div>
+                    <div data-reveal="right" data-parallax="0.08">
+                        <div class="card ring" style="padding:var(--s-5)">
+                            <div class="product-visual product-visual--detection" aria-hidden="true"><span class="product-visual__kicker">Cameleon Detection®</span><span class="product-visual__core"></span><span class="product-visual__line product-visual__line--a"></span><span class="product-visual__line product-visual__line--b"></span><span class="product-visual__node product-visual__node--a"></span><span class="product-visual__node product-visual__node--b"></span><span class="product-visual__node product-visual__node--c"></span><span class="product-visual__caption">Surface · risque · remédiation</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider-glow"></div>
+
+                <div class="grid grid-2" style="align-items:center">
+                    <div data-reveal="left" data-parallax="0.08" class="order-2">
+                        <div class="card ring" style="padding:var(--s-5)">
+                            <div class="product-visual product-visual--mill" aria-hidden="true"><span class="product-visual__kicker">Cameleon Mill®</span><span class="product-visual__core"></span><span class="product-visual__line product-visual__line--a"></span><span class="product-visual__line product-visual__line--b"></span><span class="product-visual__line product-visual__line--c"></span><span class="product-visual__node product-visual__node--a"></span><span class="product-visual__node product-visual__node--b"></span><span class="product-visual__node product-visual__node--c"></span><span class="product-visual__caption">Corrélation · détection · réponse</span></div>
+                        </div>
+                    </div>
+                    <div data-reveal="right">
+                        <span class="eyebrow" data-fr="Produit · Cameleon Mill®" data-en="Product · Cameleon Mill®"></span>
+                        <h2 class="section-title" data-fr="Détectez l'invisible grâce à l'IA" data-en="Detect the invisible with AI"></h2>
+                        <p class="section-lead" data-fr="Cameleon Mill est la plateforme de cybersécurité collaborative qui combine SIEM, XDR et détection par intelligence artificielle pour identifier les menaces avancées et les signaux faibles." data-en="Cameleon Mill is the collaborative cybersecurity platform combining SIEM, XDR and AI-based detection to surface advanced threats and weak signals."></p>
+                        <ul class="feature-list" style="margin-top:var(--s-5)">
+                            <li data-fr="Corrélation multi-sources et détection des signaux faibles" data-en="Multi-source correlation and weak-signal detection"></li>
+                            <li data-fr="Moteur d'analyse comportementale par IA" data-en="AI-driven behavioral analytics engine"></li>
+                            <li data-fr="Développé par SyberMad" data-en="Built by SyberMad"></li>
+                        </ul>
+                        <div class="hero__cta">
+                            <a class="btn btn--primary" href="solutions/produits.html#cameleon-mill" data-i18n="cta_discover"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PHILOSOPHY ===== -->
+        <section class="section" id="philosophie">
+            <div class="container">
+                <div class="section-head section-head--center" data-reveal="up">
+                    <span class="eyebrow" data-fr="Notre philosophie" data-en="Our philosophy"></span>
+                    <h2 class="section-title mx-auto" data-fr="Claire. Concrète. Humaine." data-en="Clear. Practical. Human."></h2>
+                    <p class="section-lead" data-fr="Trois principes guident chacune de nos missions. Nous ne vendons pas de la peur : nous apportons des solutions concrètes, adaptées à chaque organisation." data-en="Three principles guide every engagement. We don't sell fear: we bring concrete solutions, tailored to each organization."></p>
+                </div>
+                <div class="grid grid-3" data-stagger>
+                    <div class="card">
+                        <div class="card__icon" data-ico="target"></div>
+                        <h3 data-fr="Pragmatique" data-en="Pragmatic"></h3>
+                        <p data-fr="Nos recommandations tiennent compte de vos ressources humaines, financières et de vos contraintes opérationnelles." data-en="Our recommendations take into account your human and financial resources and your operational constraints."></p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon" data-ico="hand"></div>
+                        <h3 data-fr="Concret & terrain" data-en="Concrete & field-proven"></h3>
+                        <p data-fr="Nous vous disons quoi faire, comment, avec quelle priorité et à quel coût — preuves et exemples à l'appui." data-en="We tell you what to do, how, with what priority and at what cost — backed by evidence and examples."></p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon" data-ico="shield"></div>
+                        <h3 data-fr="Accompagnement" data-en="Support"></h3>
+                        <p data-fr="Notre travail ne s'arrête pas à la remise du rapport : nous restons disponibles jusqu'à la mise en œuvre." data-en="Our work doesn't stop when the report is delivered: we stay available through to implementation."></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TESTIMONIALS ===== -->
+        <section class="section" id="temoignages">
+            <div class="container">
+                <div class="section-head" data-reveal="up">
+                    <span class="eyebrow" data-fr="Ils nous font confiance" data-en="They trust us"></span>
+                    <h2 class="section-title" data-fr="La preuve par le terrain" data-en="Proven in the field"></h2>
+                </div>
+                <div class="grid grid-3" data-stagger>
+                    <figure class="card">
+                        <blockquote style="font-size:1.05rem;color:var(--c-text-soft)" data-fr="« Un accompagnement à la hauteur des enjeux : pragmatique, disponible et réellement expert. »" data-en="“Support that matches the stakes: pragmatic, available and genuinely expert.”"></blockquote>
+                        <figcaption style="margin-top:var(--s-5);color:var(--c-text-mut);font-size:var(--fs-sm)"><strong style="color:var(--c-text);display:block">Benjamin Gury</strong>SLCE</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <blockquote style="font-size:1.05rem;color:var(--c-text-soft)" data-fr="« Une équipe qui parle notre langage et nous a guidés sereinement vers la certification ISO 27001. »" data-en="“A team that speaks our language and guided us calmly toward ISO 27001 certification.”"></blockquote>
+                        <figcaption style="margin-top:var(--s-5);color:var(--c-text-mut);font-size:var(--fs-sm)"><strong style="color:var(--c-text);display:block">Ingrid Lamy</strong>EHPAD</figcaption>
+                    </figure>
+                    <figure class="card">
+                        <blockquote style="font-size:1.05rem;color:var(--c-text-soft)" data-fr="« Réactivité et expertise au rendez-vous, du conseil à la gestion d'incident. »" data-en="“Responsiveness and expertise throughout, from advisory to incident handling.”"></blockquote>
+                        <figcaption style="margin-top:var(--s-5);color:var(--c-text-mut);font-size:var(--fs-sm)"><strong style="color:var(--c-text);display:block">David Pageaux</strong>Aéroport de Nantes</figcaption>
+                    </figure>
+                </div>
+                <div style="margin-top:var(--s-6)" data-reveal="fade"><a class="link-arrow" href="le-cabinet.html#temoignages"><span data-fr="Tous les témoignages" data-en="All testimonials"></span><span data-ico="arrow" style="display:inline-flex;width:18px;height:18px"></span></a></div>
+            </div>
+        </section>
+
+        <!-- ===== RESOURCES TEASER ===== -->
+        <section class="section" id="ressources">
+            <div class="container">
+                <div class="section-head" data-reveal="up">
+                    <span class="eyebrow" data-fr="Ressources & expertise" data-en="Resources & expertise"></span>
+                    <h2 class="section-title" data-fr="Partager le savoir, élever le niveau" data-en="Sharing knowledge, raising the bar"></h2>
+                </div>
+                <div class="grid grid-3" data-stagger>
+                    <a class="card" href="ressources.html#cybertalk"><span class="card__tag" data-fr="Événement" data-en="Event"></span><div class="card__icon" data-ico="mic"></div><h3>Cyber Talk</h3><p data-fr="Nos conférences mensuelles décryptent l'actualité cyber : NIS-2, souveraineté, SaaS vs on-premise…" data-en="Our monthly conferences decode cyber news: NIS-2, sovereignty, SaaS vs on-premise…"></p></a>
+                    <a class="card" href="ressources.html#livres-blancs"><span class="card__tag" data-fr="Livre blanc" data-en="Whitepaper"></span><div class="card__icon" data-ico="doc"></div><h3>DORA · NIS-2</h3><p data-fr="Des dossiers complets et gratuits pour anticiper les réglementations qui transforment la cybersécurité." data-en="Complete, free dossiers to anticipate the regulations reshaping cybersecurity."></p></a>
+                    <a class="card" href="ressources.html#glossaire"><span class="card__tag" data-fr="Référence" data-en="Reference"></span><div class="card__icon" data-ico="book"></div><h3 data-fr="Glossaire" data-en="Glossary"></h3><p data-fr="Plus de 100 termes de la cybersécurité expliqués clairement, de APT à Zero-Day." data-en="Over 100 cybersecurity terms explained clearly, from APT to Zero-Day."></p></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA BAND ===== -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-band" data-reveal="scale">
+                    <span class="eyebrow" style="justify-content:center" data-fr="Prêt à passer à l'action ?" data-en="Ready to act?"></span>
+                    <h2 data-fr="Faites le point sur votre sécurité." data-en="Take stock of your security."></h2>
+                    <p data-fr="Un premier échange gratuit de 30 minutes pour identifier vos priorités. Sans engagement." data-en="A free 30-minute first exchange to identify your priorities. No commitment."></p>
+                    <div class="hero__cta">
+                        <a class="btn btn--primary btn--lg" href="contact.html?subject=commercial" data-i18n="cta_expert"></a>
+                        <a class="btn btn--ghost btn--lg" href="ressources.html#demos" data-i18n="cta_demo"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="site-footer-slot"></div>
+
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/icons.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

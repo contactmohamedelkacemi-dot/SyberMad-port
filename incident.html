@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Déclarer un incident — Réponse à incident | SyberMad</title>
+  <meta name="description" content="Déclarez un incident de cybersécurité à l'équipe de réponse à incident SyberMad. Formulaire dédié, prise en charge rapide.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#070A0F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/redesign.css">
+</head>
+<body data-page="" data-base="">
+  <div id="site-header-slot"></div>
+  <main id="main">
+
+    <div class="container">
+      <nav class="crumbs" aria-label="Fil d'ariane">
+        <a href="index.html" data-fr="Accueil" data-en="Home"></a><span>/</span>
+        <a href="contact.html" data-fr="Contact" data-en="Contact"></a><span>/</span>
+        <span aria-current="page" data-fr="Déclarer un incident" data-en="Declare an incident"></span>
+      </nav>
+    </div>
+
+    <section class="page-hero">
+      <span class="hero__orb hero__orb--2"></span>
+      <div class="container">
+        <span class="chip" data-reveal="fade" style="border-color:rgba(245,165,36,.4)"><span class="badge-dot" style="background:var(--c-amber);box-shadow:0 0 0 4px rgba(245,165,36,.18)"></span><span data-fr="Cellule de réponse à incident" data-en="Incident response unit"></span></span>
+        <h1 style="margin-top:var(--s-4)" data-fr="Déclarer un incident de sécurité" data-en="Declare a security incident"></h1>
+        <p class="hero__lead" data-fr="Une attaque en cours, une suspicion de compromission ? Décrivez la situation ci-dessous : notre équipe qualifie l'incident et vous recontacte au plus vite. En cas d'urgence absolue, cochez « rappel immédiat »." data-en="An attack in progress, a suspected compromise? Describe the situation below: our team qualifies the incident and gets back to you as fast as possible. For an absolute emergency, tick “immediate callback”."></p>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="split-layout" style="--split-ratio:1.5fr 1fr">
+
+          <!-- Incident form -->
+          <form class="card form-card" data-reveal="left" id="incidentForm" novalidate
+                action="/.netlify/functions/incident" method="POST"
+                enctype="multipart/form-data" data-mailform data-mail-template="incident" data-origin="Déclaration d'incident">
+            <h2 style="font-size:var(--fs-h3);margin-bottom:var(--s-5)" data-fr="Décrivez l'incident" data-en="Describe the incident"></h2>
+
+            <!-- FormSubmit routing (hidden) -->
+            <input type="hidden" name="_subject" data-subject-line value="SyberMad — Déclaration d'incident">
+            <input type="hidden" name="origin" value="Déclaration d'incident">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="incident_type_label" value="Rançongiciel (ransomware)">
+            <input type="hidden" name="criticality_label" value="Élevée — impact majeur">
+            <input type="hidden" name="immediate_callback_status" value="Non">
+            <input type="hidden" name="consent_status" value="Accepté">
+            <input type="hidden" name="attachment_names" value="">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+
+            <div class="grid grid-2" style="gap:var(--s-4)">
+              <div class="field"><label for="company" data-fr="Société" data-en="Company"></label><input id="company" name="company" type="text" required></div>
+              <div class="field"><label for="name" data-fr="Nom complet" data-en="Full name"></label><input id="name" name="name" type="text" required autocomplete="name"></div>
+            </div>
+            <div class="grid grid-2" style="gap:var(--s-4)">
+              <div class="field"><label for="email" data-fr="E-mail" data-en="Email"></label><input id="email" name="email" type="email" required autocomplete="email"></div>
+              <div class="field"><label for="phone" data-fr="Téléphone" data-en="Phone"></label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div>
+            </div>
+            <div class="field"><label for="org" data-fr="Organisation / entité concernée" data-en="Organization / affected entity"></label><input id="org" name="organization" type="text" autocomplete="organization"></div>
+
+            <div class="grid grid-2" style="gap:var(--s-4)">
+              <div class="field">
+                <label id="typeLabel" data-fr="Type d'incident" data-en="Incident type"></label>
+                <div class="select" data-select>
+                  <input type="hidden" name="incident_type" value="ransomware">
+                  <button type="button" class="select__trigger" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="typeList" aria-labelledby="typeLabel">
+                    <span class="select__value" data-fr="Rançongiciel (ransomware)" data-en="Ransomware">Rançongiciel (ransomware)</span>
+                    <svg class="select__caret" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                  <ul class="select__list" id="typeList" role="listbox" aria-labelledby="typeLabel" tabindex="-1">
+                    <li class="select__option" role="option" data-value="ransomware" aria-selected="true" data-fr="Rançongiciel (ransomware)" data-en="Ransomware"></li>
+                    <li class="select__option" role="option" data-value="phishing" aria-selected="false" data-fr="Hameçonnage (phishing)" data-en="Phishing"></li>
+                    <li class="select__option" role="option" data-value="intrusion" aria-selected="false" data-fr="Intrusion / système compromis" data-en="Intrusion / system compromise"></li>
+                    <li class="select__option" role="option" data-value="malware" aria-selected="false" data-fr="Logiciel malveillant (malware)" data-en="Malware"></li>
+                    <li class="select__option" role="option" data-value="ddos" aria-selected="false" data-fr="Déni de service (DDoS)" data-en="Denial of service (DDoS)"></li>
+                    <li class="select__option" role="option" data-value="data-leak" aria-selected="false" data-fr="Fuite / vol de données" data-en="Data leak / theft"></li>
+                    <li class="select__option" role="option" data-value="account" aria-selected="false" data-fr="Compromission de compte" data-en="Account compromise"></li>
+                    <li class="select__option" role="option" data-value="fraud" aria-selected="false" data-fr="Fraude (au président, virement)" data-en="Fraud (CEO, transfer)"></li>
+                    <li class="select__option" role="option" data-value="other" aria-selected="false" data-fr="Autre" data-en="Other"></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="field">
+                <label id="critLabel" data-fr="Criticité" data-en="Criticality"></label>
+                <div class="select" data-select>
+                  <input type="hidden" name="criticality" value="high">
+                  <button type="button" class="select__trigger" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="critList" aria-labelledby="critLabel">
+                    <span class="select__value" data-fr="Élevée — impact majeur" data-en="High — major impact">Élevée — impact majeur</span>
+                    <svg class="select__caret" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                  <ul class="select__list" id="critList" role="listbox" aria-labelledby="critLabel" tabindex="-1">
+                    <li class="select__option" role="option" data-value="critical" aria-selected="false" data-fr="Critique — activité à l'arrêt" data-en="Critical — operations down"></li>
+                    <li class="select__option" role="option" data-value="high" aria-selected="true" data-fr="Élevée — impact majeur" data-en="High — major impact"></li>
+                    <li class="select__option" role="option" data-value="medium" aria-selected="false" data-fr="Moyenne — impact limité" data-en="Medium — limited impact"></li>
+                    <li class="select__option" role="option" data-value="low" aria-selected="false" data-fr="Faible — pas d'impact immédiat" data-en="Low — no immediate impact"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="field"><label for="datetime" data-fr="Date et heure de détection" data-en="Date and time of detection"></label><input id="datetime" name="detected_at" type="datetime-local"></div>
+            <div class="field"><label for="desc" data-fr="Description de l'incident" data-en="Incident description"></label><textarea id="desc" name="description" required placeholder=""></textarea></div>
+            <div class="field"><label for="systems" data-fr="Systèmes / services affectés" data-en="Systems / services affected"></label><textarea id="systems" name="systems_affected" style="min-height:90px"></textarea></div>
+            <div class="field"><label for="impact" data-fr="Impact métier" data-en="Business impact"></label><textarea id="impact" name="business_impact" style="min-height:90px"></textarea></div>
+            <div class="field"><label for="attachments" data-fr="Pièces jointes (logs, captures…)" data-en="Attachments (logs, screenshots…)"></label><input id="attachments" name="attachment" type="file" multiple accept=".xlsx,.xls,.ods,.docx,.docm,.doc,.csv,.pdf,.txt,.gif,.jpg,.jpeg,.png,.tif,.tiff,.rtf,.bmp,.cgm,.css,.shtml,.html,.htm,.zip,.xml,.ppt,.pptx,.tar,.ez,.ics,.mobi,.msg,.pub,.eps,.odt,.mp3,.m4a,.m4v,.wma,.ogg,.flac,.wav,.aif,.aifc,.aiff,.mp4,.mov,.avi,.mkv,.mpeg,.mpg,.wmv,.pkpass,.xlsm"><p data-file-list style="margin-top:var(--s-2);font-size:var(--fs-sm);color:var(--c-text-mut);display:none"></p></div>
+
+            <label for="callback" style="display:flex;gap:var(--s-3);align-items:flex-start;font-size:var(--fs-sm);color:var(--c-text-soft);margin-bottom:var(--s-4)">
+              <input id="callback" name="immediate_callback" type="checkbox" value="Oui" style="margin-top:3px">
+              <span data-fr="J'ai besoin d'un rappel immédiat (urgence)." data-en="I need an immediate callback (emergency)."></span>
+            </label>
+            <label for="consent" style="display:flex;gap:var(--s-3);align-items:flex-start;font-size:var(--fs-sm);color:var(--c-text-mut);margin-bottom:var(--s-4)">
+              <input id="consent" name="consent" type="checkbox" required style="margin-top:3px">
+              <span data-fr="J'accepte que ces informations soient utilisées pour traiter ma déclaration, conformément à la politique de confidentialité." data-en="I agree that this information may be used to handle my declaration, in accordance with the privacy policy."></span>
+            </label>
+            <button type="submit" class="btn btn--primary btn--lg btn--block" data-fr="Envoyer la déclaration" data-en="Send the declaration"></button>
+            <p data-formnote role="status" style="margin-top:var(--s-4);font-size:var(--fs-sm);color:var(--c-green);display:none" data-fr="Déclaration reçue. Notre équipe de réponse à incident vous recontacte au plus vite." data-en="Declaration received. Our incident response team will get back to you as fast as possible."></p>
+            <p data-formerror role="alert" style="margin-top:var(--s-4);font-size:var(--fs-sm);color:var(--c-red);display:none" data-fr="L'envoi a échoué. Réessayez, ou écrivez-nous directement à contact@sybermad.com en précisant « INCIDENT » en objet." data-en="Sending failed. Try again, or email us directly at contact@sybermad.com with “INCIDENT” in the subject."></p>
+          </form>
+
+          <!-- Reassurance / first reflexes -->
+          <aside data-reveal="right" class="grid" style="gap:var(--s-4)">
+            <div class="card glass"><div class="card__icon" data-ico="alert" style="color:var(--c-amber);background:rgba(245,165,36,.12)"></div><h3 style="font-size:var(--fs-h3)" data-fr="Premiers réflexes" data-en="First reflexes"></h3><ul class="feature-list" style="margin-top:var(--s-3)">
+              <li data-fr="Isolez les machines touchées du réseau (sans les éteindre)." data-en="Isolate affected machines from the network (without shutting them down)."></li>
+              <li data-fr="Préservez les preuves : journaux, captures, e-mails suspects." data-en="Preserve evidence: logs, screenshots, suspicious emails."></li>
+              <li data-fr="Ne payez aucune rançon avant d'avoir échangé avec un expert." data-en="Do not pay any ransom before speaking with an expert."></li>
+            </ul></div>
+            <div class="card glass"><div class="card__icon" data-ico="mail"></div><h3 style="font-size:var(--fs-h3)" data-fr="Contact direct" data-en="Direct contact"></h3><a href="mailto:contact@sybermad.com" style="color:var(--c-cyan)">contact@sybermad.com</a><p style="color:var(--c-text-mut);font-size:var(--fs-sm);margin-top:var(--s-2)" data-fr="Réponse rapide — précisez « INCIDENT » en objet." data-en="Fast response — put “INCIDENT” in the subject."></p></div>
+            <div class="card glass"><div class="card__icon" data-ico="shield"></div><h3 style="font-size:var(--fs-h3)" data-fr="Ce qui suit" data-en="What happens next"></h3><p style="color:var(--c-text-mut);font-size:var(--fs-sm)" data-fr="Qualification, confinement, investigation (forensic) puis remédiation et retour d'expérience — en lien avec Cameleon SOC, notre SOC managé." data-en="Qualification, containment, forensic investigation, then remediation and lessons learned — together with Cameleon SOC, our managed SOC."></p><a class="link-arrow" style="margin-top:var(--s-3)" href="solutions/cameleon-soc.html#reponse"><span data-fr="Cameleon SOC — réponse à incident" data-en="Cameleon SOC — incident response"></span><span data-ico="arrow" style="width:18px;height:18px;display:inline-flex"></span></a></div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer-slot"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="assets/js/email-config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

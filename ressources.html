@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ressources — Blog, Cyber Talk, Livres blancs, Glossaire | SyberMad</title>
+  <meta name="description" content="Le hub de ressources SyberMad : blog, conférences Cyber Talk, webinars, livres blancs (DORA, NIS-2), fiches produit, glossaire, démos et espace presse.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#070A0F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/redesign.css">
+</head>
+<body data-page="resources" data-base="">
+  <div id="site-header-slot"></div>
+  <main id="main">
+
+    <div class="container">
+      <nav class="crumbs" aria-label="Fil d'ariane">
+        <a href="index.html" data-fr="Accueil" data-en="Home"></a><span>/</span>
+        <span aria-current="page" data-fr="Ressources" data-en="Resources"></span>
+      </nav>
+    </div>
+
+    <section class="page-hero">
+      <span class="hero__orb hero__orb--2"></span>
+      <div class="container">
+        <span class="eyebrow" data-fr="Ressources & expertise" data-en="Resources & expertise"></span>
+        <h1 data-fr="Le savoir cyber, partagé sans détour" data-en="Cyber knowledge, shared straight"></h1>
+        <p class="hero__lead" data-fr="Blog, conférences, webinars, livres blancs, fiches produit, glossaire, démos et espace presse : explorez toutes nos ressources pour rester à la pointe de la cybersécurité." data-en="Blog, conferences, webinars, whitepapers, datasheets, glossary, demos and press room: explore all our resources to stay at the cutting edge of cybersecurity."></p>
+      </div>
+    </section>
+
+    <!-- Filter nav -->
+    <section class="section--tight">
+      <div class="container">
+        <div class="filterbar" data-filterbar="#resource-grid" data-reveal="fade">
+          <button class="active" data-filter="all" data-fr="Tout" data-en="All"></button>
+          <button data-filter="blog">Blog</button>
+          <button data-filter="event" data-fr="Événements" data-en="Events"></button>
+          <button data-filter="white" data-fr="Livres blancs" data-en="Whitepapers"></button>
+          <button data-filter="sheet" data-fr="Fiches produit" data-en="Datasheets"></button>
+          <button data-filter="demo" data-fr="Démos" data-en="Demos"></button>
+        </div>
+        <div id="resource-grid" class="grid grid-3" data-stagger>
+          <a class="card" data-cat="event" href="#cybertalk"><span class="card__tag" data-fr="Événement" data-en="Event"></span><div class="card__icon" data-ico="mic"></div><h3>Cyber Talk</h3><p data-fr="Nos conférences mensuelles : NIS-2, souveraineté, SaaS vs on-premise…" data-en="Our monthly conferences: NIS-2, sovereignty, SaaS vs on-premise…"></p></a>
+          <a class="card" data-cat="white" href="#livres-blancs"><span class="card__tag" data-fr="Livre blanc" data-en="Whitepaper"></span><div class="card__icon" data-ico="doc"></div><h3>DORA · NIS-2</h3><p data-fr="Dossiers complets sur les réglementations clés." data-en="Complete dossiers on key regulations."></p></a>
+          <a class="card" data-cat="blog" href="#blog"><span class="card__tag">Blog</span><div class="card__icon" data-ico="book"></div><h3 data-fr="Articles & analyses" data-en="Articles & analysis"></h3><p data-fr="Décryptage de l'actualité cyber par nos experts." data-en="Cyber news decoded by our experts."></p></a>
+          <a class="card" data-cat="webinar event" href="#webinars"><span class="card__tag">Webinar</span><div class="card__icon" data-ico="eye"></div><h3>Webinars</h3><p data-fr="Sessions en ligne sur nos produits et l'actualité des menaces." data-en="Online sessions on our products and threat news."></p></a>
+          <a class="card" data-cat="sheet" href="#fiches"><span class="card__tag" data-fr="PDF" data-en="PDF"></span><div class="card__icon" data-ico="file"></div><h3 data-fr="Fiches produit" data-en="Datasheets"></h3><p data-fr="Téléchargez les fiches de nos solutions." data-en="Download our solution datasheets."></p></a>
+          <a class="card" data-cat="demo" href="#demos"><span class="card__tag" data-fr="Essai" data-en="Trial"></span><div class="card__icon" data-ico="rocket"></div><h3 data-fr="Démos & Essais" data-en="Demos & Trials"></h3><p data-fr="Testez Cameleon Detection gratuitement et demandez une démo." data-en="Try Cameleon Detection for free and request a demo."></p></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cyber Talk -->
+    <section class="section" id="cybertalk">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <span class="eyebrow" data-fr="Cyber Talk" data-en="Cyber Talk"></span>
+          <h2 class="section-title" data-fr="Nos conférences mensuelles, animées par nos experts" data-en="Our monthly conferences, hosted by our experts"></h2>
+          <p class="section-lead" data-fr="Chaque mois, nous décryptons un sujet brûlant de la cybersécurité. Inscrivez-vous ou demandez l'accès au replay." data-en="Each month, we decode a hot cybersecurity topic. Register or request the replay."></p>
+        </div>
+        <div class="grid grid-3" data-stagger>
+          <article class="card"><div class="card__icon" data-ico="mic"></div><h3 data-fr="Conformité NIS-2 : ce qui change" data-en="NIS-2 compliance: what changes"></h3><p data-fr="Périmètre, obligations et calendrier d'entrée en vigueur de la directive." data-en="Scope, obligations and enforcement timeline of the directive."></p><a class="link-arrow" style="margin-top:var(--s-4)" href="contact.html?subject=general"><span data-fr="Demander l'accès" data-en="Request access"></span><span data-ico="arrow" style="width:18px;height:18px;display:inline-flex"></span></a></article>
+          <article class="card"><div class="card__icon" data-ico="cloud"></div><h3 data-fr="SI / DR : On-premise vs SaaS" data-en="IS / DR: On-premise vs SaaS"></h3><p data-fr="Quelle architecture pour la résilience et la souveraineté de vos données ?" data-en="Which architecture for the resilience and sovereignty of your data?"></p><a class="link-arrow" style="margin-top:var(--s-4)" href="contact.html?subject=general"><span data-fr="Demander l'accès" data-en="Request access"></span><span data-ico="arrow" style="width:18px;height:18px;display:inline-flex"></span></a></article>
+          <article class="card"><div class="card__icon" data-ico="bolt"></div><h3 data-fr="IA & cybersécurité" data-en="AI & cybersecurity"></h3><p data-fr="Opportunités et nouveaux risques de l'intelligence artificielle pour la défense." data-en="Opportunities and new risks of artificial intelligence for defense."></p><a class="link-arrow" style="margin-top:var(--s-4)" href="contact.html?subject=general"><span data-fr="Demander l'accès" data-en="Request access"></span><span data-ico="arrow" style="width:18px;height:18px;display:inline-flex"></span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Whitepapers -->
+    <section class="section" id="livres-blancs">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <span class="eyebrow" data-fr="Livres blancs" data-en="Whitepapers"></span>
+          <h2 class="section-title" data-fr="Anticipez les réglementations qui transforment la cyber" data-en="Anticipate the regulations reshaping cyber"></h2>
+        </div>
+        <div class="grid grid-3" data-stagger>
+          <article class="card"><span class="card__tag" data-fr="Gratuit" data-en="Free"></span><div class="card__icon" data-ico="doc"></div><h3 data-fr="Livre blanc — Règlement DORA" data-en="Whitepaper — DORA Regulation"></h3><p data-fr="Tout comprendre du règlement européen sur la résilience opérationnelle numérique du secteur financier." data-en="Understand the European regulation on the financial sector's digital operational resilience."></p><a class="btn btn--ghost" style="margin-top:var(--s-4)" href="contact.html?subject=general" data-fr="Demander le livre blanc" data-en="Request the whitepaper"></a></article>
+          <article class="card"><span class="card__tag" data-fr="Gratuit" data-en="Free"></span><div class="card__icon" data-ico="doc"></div><h3 data-fr="Livre blanc — Directive NIS-2" data-en="Whitepaper — NIS-2 Directive"></h3><p data-fr="Le dossier complet pour comprendre la directive NIS-2 et préparer votre mise en conformité." data-en="The complete dossier to understand the NIS-2 directive and prepare your compliance."></p><a class="btn btn--ghost" style="margin-top:var(--s-4)" href="contact.html?subject=general" data-fr="Recevoir le dossier" data-en="Get the dossier"></a></article>
+          <article class="card"><span class="card__tag" data-fr="Gratuit" data-en="Free"></span><div class="card__icon" data-ico="key"></div><h3 data-fr="Livre blanc — Subventions Cyber" data-en="Whitepaper — Cyber Subsidies"></h3><p data-fr="Les aides de l'État et des régions pour financer vos projets de cybersécurité en France." data-en="State and regional grants to fund your cybersecurity projects in France."></p><a class="btn btn--ghost" style="margin-top:var(--s-4)" href="contact.html?subject=general" data-fr="Recevoir le dossier" data-en="Get the dossier"></a></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Datasheets + Webinars row -->
+    <section class="section" id="fiches">
+      <div class="container">
+        <div class="grid grid-2">
+          <div data-reveal="left">
+            <span class="eyebrow" data-fr="Fiches produit" data-en="Datasheets"></span>
+            <h2 class="section-title" style="font-size:var(--fs-h3)" data-fr="Téléchargez nos fiches produit" data-en="Download our datasheets"></h2>
+            <ul class="feature-list" style="margin-top:var(--s-5)">
+              <li><a href="contact.html?subject=general" data-fr="Fiche Cameleon Mill XDR" data-en="Cameleon Mill XDR datasheet"></a></li>
+              <li><a href="contact.html?subject=general" data-fr="Fiche Cameleon Detection" data-en="Cameleon Detection datasheet"></a></li>
+              <li><a href="contact.html?subject=cameleon" data-fr="Fiche Cameleon SOC (MDR)" data-en="Cameleon SOC (MDR) datasheet"></a></li>
+              <li><a href="contact.html?subject=general" data-fr="Fiche CERT / CSIRT" data-en="CERT / CSIRT datasheet"></a></li>
+              <li><a href="contact.html?subject=general" data-fr="Fiche Audits & Gouvernance" data-en="Audits & Governance datasheet"></a></li>
+              <li><a href="contact.html?subject=general" data-fr="Fiche Audit Flash 360°" data-en="Audit Flash 360° datasheet"></a></li>
+            </ul>
+          </div>
+          <div data-reveal="right" id="webinars">
+            <span class="eyebrow">Webinars</span>
+            <h2 class="section-title" style="font-size:var(--fs-h3)" data-fr="Nos prochains webinars" data-en="Our upcoming webinars"></h2>
+            <div class="grid" style="gap:var(--s-3);margin-top:var(--s-5)">
+              <div class="card glass" style="padding:var(--s-4);display:flex;justify-content:space-between;align-items:center;gap:var(--s-4)"><div><strong style="font-family:var(--font-display);display:block">Cameleon Mill V12.4</strong><small style="color:var(--c-text-dim)" data-fr="Nouveautés produit" data-en="Product release"></small></div><a class="btn btn--ghost" href="contact.html?subject=general" data-fr="S'inscrire" data-en="Register"></a></div>
+              <div class="card glass" style="padding:var(--s-4);display:flex;justify-content:space-between;align-items:center;gap:var(--s-4)"><div><strong style="font-family:var(--font-display);display:block">Matanbuchus 3.0</strong><small style="color:var(--c-text-dim)" data-fr="Analyse de menace" data-en="Threat analysis"></small></div><a class="btn btn--ghost" href="contact.html?subject=general" data-fr="S'inscrire" data-en="Register"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="section" id="blog">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <span class="eyebrow">Blog</span>
+          <h2 class="section-title" data-fr="Nos derniers articles" data-en="Our latest articles"></h2>
+        </div>
+        <div class="grid grid-3" data-stagger>
+          <article class="card"><small style="color:var(--c-cyan);font-family:var(--font-display)">03 / 01 / 2026</small><h3 style="margin-top:var(--s-3)" data-fr="Gestion des prestataires & conformité NIS-2 : un enjeu stratégique" data-en="Vendor management & NIS-2 compliance: a strategic challenge"></h3><a class="link-arrow" style="margin-top:var(--s-4)" href="#blog"><span data-fr="Lire" data-en="Read"></span><span data-ico="arrow" style="width:18px;height:18px;display:inline-flex"></span></a></article>
+          <article class="card"><small style="color:var(--c-cyan);font-family:var(--font-display)">19 / 12 / 2025</small><h3 style="margin-top:var(--s-3)" data-fr="CaRE D2 : quand la continuité d'activité sort du périmètre IT" data-en="CaRE D2: when business continuity goes beyond IT"></h3><a class="link-arrow" style="margin-top:var(--s-4)" href="#blog"><span data-fr="Lire" data-en="Read"></span><span data-ico="arrow" style="width:18px;height:18px;display:inline-flex"></span></a></article>
+          <article class="card"><small style="color:var(--c-cyan);font-family:var(--font-display)">09 / 11 / 2025</small><h3 style="margin-top:var(--s-3)" data-fr="Cybersécurité à la télé : retour sur notre intervention" data-en="Cybersecurity on TV: a look back at our appearance"></h3><a class="link-arrow" style="margin-top:var(--s-4)" href="#blog"><span data-fr="Lire" data-en="Read"></span><span data-ico="arrow" style="width:18px;height:18px;display:inline-flex"></span></a></article>
+          <article class="card"><small style="color:var(--c-cyan);font-family:var(--font-display)">21 / 10 / 2025</small><h3 style="margin-top:var(--s-3)" data-fr="Combien coûte un test d'intrusion ? Les facteurs qui font varier le prix" data-en="How much does a penetration test cost? The factors that move the price"></h3><a class="link-arrow" style="margin-top:var(--s-4)" href="#blog"><span data-fr="Lire" data-en="Read"></span><span data-ico="arrow" style="width:18px;height:18px;display:inline-flex"></span></a></article>
+          <article class="card"><small style="color:var(--c-cyan);font-family:var(--font-display)">30 / 09 / 2025</small><h3 style="margin-top:var(--s-3)" data-fr="MFA : la mesure la plus rentable de votre cybersécurité" data-en="MFA: the most cost-effective measure in your cybersecurity"></h3><a class="link-arrow" style="margin-top:var(--s-4)" href="#blog"><span data-fr="Lire" data-en="Read"></span><span data-ico="arrow" style="width:18px;height:18px;display:inline-flex"></span></a></article>
+          <article class="card"><small style="color:var(--c-cyan);font-family:var(--font-display)">12 / 09 / 2025</small><h3 style="margin-top:var(--s-3)" data-fr="Ransomware : 7 réflexes qui sauvent une organisation" data-en="Ransomware: 7 reflexes that save an organization"></h3><a class="link-arrow" style="margin-top:var(--s-4)" href="#blog"><span data-fr="Lire" data-en="Read"></span><span data-ico="arrow" style="width:18px;height:18px;display:inline-flex"></span></a></article>
+          <article class="card"><small style="color:var(--c-cyan);font-family:var(--font-display)">28 / 08 / 2025</small><h3 style="margin-top:var(--s-3)" data-fr="RSSI externalisé : pour qui, pourquoi, à quel prix ?" data-en="Outsourced CISO: for whom, why and at what cost?"></h3><a class="link-arrow" style="margin-top:var(--s-4)" href="#blog"><span data-fr="Lire" data-en="Read"></span><span data-ico="arrow" style="width:18px;height:18px;display:inline-flex"></span></a></article>
+          <article class="card"><small style="color:var(--c-cyan);font-family:var(--font-display)">07 / 08 / 2025</small><h3 style="margin-top:var(--s-3)" data-fr="ISO 27001 sans se noyer : une feuille de route progressive" data-en="ISO 27001 without drowning: a progressive roadmap"></h3><a class="link-arrow" style="margin-top:var(--s-4)" href="#blog"><span data-fr="Lire" data-en="Read"></span><span data-ico="arrow" style="width:18px;height:18px;display:inline-flex"></span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Glossary -->
+    <section class="section" id="glossaire">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <span class="eyebrow" data-fr="Glossaire" data-en="Glossary"></span>
+          <h2 class="section-title" data-fr="Le vocabulaire de la cybersécurité, clairement expliqué" data-en="The vocabulary of cybersecurity, clearly explained"></h2>
+        </div>
+        <div class="acc" data-acc data-stagger>
+          <div class="acc__item"><button class="acc__head"><span>APT — Advanced Persistent Threat</span><span class="acc__ico">+</span></button><div class="acc__body"><div data-fr="Menace persistante avancée : attaque ciblée et durable, généralement menée par un groupe disposant de moyens importants, visant à s'infiltrer durablement dans un système d'information." data-en="A targeted, long-lasting attack, usually carried out by a well-resourced group, aiming to persistently infiltrate an information system."></div></div></div>
+          <div class="acc__item"><button class="acc__head"><span>CVE — Common Vulnerabilities and Exposures</span><span class="acc__ico">+</span></button><div class="acc__body"><div data-fr="Système de référencement public des vulnérabilités connues, identifiant chaque faille par un code unique pour faciliter son suivi." data-en="A public reference system for known vulnerabilities, identifying each flaw with a unique code to ease tracking."></div></div></div>
+          <div class="acc__item"><button class="acc__head"><span>DDoS — Distributed Denial of Service</span><span class="acc__ico">+</span></button><div class="acc__body"><div data-fr="Attaque par déni de service distribué : saturation d'un service en ligne par un afflux massif de requêtes provenant de multiples sources." data-en="A distributed denial-of-service attack: saturating an online service with a massive flood of requests from multiple sources."></div></div></div>
+          <div class="acc__item"><button class="acc__head"><span>EDR — Endpoint Detection and Response</span><span class="acc__ico">+</span></button><div class="acc__body"><div data-fr="Solution de détection et de réponse sur les terminaux, qui surveille en continu les postes et serveurs pour détecter et neutraliser les comportements malveillants." data-en="An endpoint detection and response solution that continuously monitors workstations and servers to detect and neutralize malicious behavior."></div></div></div>
+          <div class="acc__item"><button class="acc__head"><span>SIEM / XDR</span><span class="acc__ico">+</span></button><div class="acc__body"><div data-fr="Le SIEM centralise et corrèle les journaux de sécurité ; le XDR étend la détection et la réponse à l'ensemble des couches (réseau, endpoint, cloud) pour une vision unifiée." data-en="SIEM centralizes and correlates security logs; XDR extends detection and response across all layers (network, endpoint, cloud) for a unified view."></div></div></div>
+          <div class="acc__item"><button class="acc__head"><span>Zero-Day</span><span class="acc__ico">+</span></button><div class="acc__body"><div data-fr="Vulnérabilité inconnue de l'éditeur et non corrigée, exploitée par les attaquants avant qu'un correctif ne soit disponible." data-en="A vulnerability unknown to the vendor and unpatched, exploited by attackers before a fix is available."></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demos -->
+    <section class="section" id="demos">
+      <div class="container">
+        <div class="grid grid-2" style="align-items:center">
+          <div data-reveal="left">
+            <span class="eyebrow" data-fr="Démos & Essais" data-en="Demos & Trials"></span>
+            <h2 class="section-title" data-fr="Découvrez, testez, prouvez, validez nos solutions" data-en="Discover, test, prove and validate our solutions"></h2>
+            <p class="section-lead" data-fr="Lancez un essai gratuit de Cameleon Detection, réservez une démonstration de Cameleon Mill XDR ou demandez un POC accompagné par nos experts." data-en="Start a free Cameleon Detection trial, book a Cameleon Mill XDR demo or request an expert-led POC."></p>
+          </div>
+          <div class="grid" data-stagger style="gap:var(--s-4)">
+            <div class="card glass" style="display:flex;justify-content:space-between;align-items:center;gap:var(--s-4)"><div><strong style="font-family:var(--font-display);display:block">Cameleon Detection — <span data-fr="Test gratuit" data-en="Free trial"></span></strong><small style="color:var(--c-text-dim)" data-fr="Scanner de vulnérabilités" data-en="Vulnerability scanner"></small></div><a class="btn btn--primary" href="contact.html?subject=cameleon-detection" data-fr="S'inscrire" data-en="Sign up"></a></div>
+            <div class="card glass" style="display:flex;justify-content:space-between;align-items:center;gap:var(--s-4)"><div><strong style="font-family:var(--font-display);display:block">Cameleon Mill XDR — <span data-fr="Démo" data-en="Demo"></span></strong><small style="color:var(--c-text-dim)" data-fr="SIEM / XDR par IA" data-en="AI SIEM / XDR"></small></div><a class="btn btn--primary" href="contact.html?subject=cameleon-mill" data-i18n="cta_demo"></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Press -->
+    <section class="section" id="presse">
+      <div class="container">
+        <div class="card glass" data-reveal="scale" style="padding:var(--s-7)">
+          <div class="grid grid-2" style="align-items:center">
+            <div>
+              <span class="eyebrow" data-fr="Espace presse" data-en="Press room"></span>
+              <h2 class="section-title" style="font-size:var(--fs-h3)" data-fr="Vous êtes journaliste ?" data-en="Are you a journalist?"></h2>
+              <p style="color:var(--c-text-mut);margin-top:var(--s-3)" data-fr="Retrouvez nos communiqués de presse, notre logothèque et nos actualités. Pour toute demande, contactez notre service presse." data-en="Find our press releases, logo library and news. For any request, contact our press team."></p>
+            </div>
+            <div style="text-align:left">
+              <a class="chip" style="margin-bottom:var(--s-3)" href="mailto:presse@sybermad.com"><span data-ico="mail" style="width:16px;height:16px;display:inline-flex"></span> presse@sybermad.com</a>
+              <ul class="feature-list" style="margin-top:var(--s-3)">
+                <li><a href="#presse" data-fr="Communiqués de presse 2026" data-en="Press releases 2026"></a></li>
+                <li><a href="#presse" data-fr="Communiqués de presse 2025" data-en="Press releases 2025"></a></li>
+                <li><a href="#presse" data-fr="Logothèque" data-en="Logo library"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer-slot"></div>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
