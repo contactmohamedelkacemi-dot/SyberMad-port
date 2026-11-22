@@ -13,7 +13,7 @@ Open `index.html` with **VS Code Live Server** (or any static file server). No i
 ├── index.html                  Home
 ├── solutions.html              Solutions overview (lifecycle spine)
 ├── solutions/
-│   ├── produits.html           Cameleon Detection + Cameleon Mill
+│   ├── produits.html           ARGUS Detection + ARGUS Mill
 │   ├── services-manages.html   SOC · SOC public · EDR · CSIRT · Tickets
 │   ├── audit.html              Pentest · Vuln · PASSI · Code · Flash 360° · Dark web · Phishing · Stress test
 │   ├── gouvernance.html        Conseil/RSSI · RGPD · NIS-2 · DORA · Crise

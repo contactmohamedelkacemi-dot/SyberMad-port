@@ -17,17 +17,17 @@ const DICT = {
 
   /* mega - solutions columns */
   mega_products:   { fr: "Produits",                 en: "Products" },
-  mega_managed:    { fr: "Cameleon SOC (MDR)",       en: "Cameleon SOC (MDR)" },
+  mega_managed:    { fr: "ARGUS SOC (MDR)",       en: "ARGUS SOC (MDR)" },
   mega_audit:      { fr: "Audit & Offensif",         en: "Audit & Offensive" },
   mega_gov:        { fr: "Conseil & Gouvernance",    en: "Advisory & Governance" },
   mega_training:   { fr: "Formation",                en: "Training" },
 
-  s_ikare:     { fr: "Cameleon Detection — Scanner de vulnérabilités", en: "Cameleon Detection — Vulnerability Scanner" },
+  s_ikare:     { fr: "ARGUS Detection — Scanner de vulnérabilités", en: "ARGUS Detection — Vulnerability Scanner" },
   s_ikare_d:   { fr: "Détection continue des failles",     en: "Continuous flaw detection" },
-  s_reveelium: { fr: "Cameleon Mill — SIEM / XDR",             en: "Cameleon Mill — SIEM / XDR" },
+  s_reveelium: { fr: "ARGUS Mill — SIEM / XDR",             en: "ARGUS Mill — SIEM / XDR" },
   s_reveelium_d:{ fr: "Détection par IA",                  en: "AI-powered detection" },
-  s_cameleon:  { fr: "Cameleon SOC",                        en: "Cameleon SOC" },
-  s_cameleon_d:{ fr: "SOC managé (MDR)",                    en: "Managed SOC (MDR)" },
+  s_argus:  { fr: "ARGUS SOC",                        en: "ARGUS SOC" },
+  s_argus_d:{ fr: "SOC managé (MDR)",                    en: "Managed SOC (MDR)" },
   s_soc:       { fr: "Supervision continue",               en: "Continuous monitoring" },
   s_soc_d:     { fr: "Triage humain des alertes",          en: "Human alert triage" },
   s_edr:       { fr: "Détection & réponse (MDR)",          en: "Detection & response (MDR)" },

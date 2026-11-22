@@ -16,18 +16,16 @@
         <stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#6366F1"/>
       </linearGradient>
     </defs>
-    <path class="mark__shield" d="M24 4 7 13v13c0 11 9 16 17 18 8-2 17-7 17-18V13z" fill="none" stroke="url(#bg)" stroke-width="2.4" stroke-linejoin="round"/>
-    <circle class="mark__ping" cx="24" cy="24" r="8.6" fill="none" stroke="url(#bg)" stroke-width="1"/>
-    <g class="mark__ring">
-      <circle cx="24" cy="24" r="8.6" fill="none" stroke="url(#bg)" stroke-width="1" stroke-dasharray="2.25 4.5" opacity=".55"/>
-    </g>
-    <g class="mark__eye">
-      <circle class="eye__iris" cx="24" cy="24" r="4.4" fill="none" stroke="url(#bg)" stroke-width="1.2"/>
-      <g class="eye__gx"><g class="eye__gy">
-        <circle class="eye__pupil" cx="24" cy="24" r="2.4" fill="url(#bg)"/>
-        <circle class="eye__spark" cx="23" cy="23" r=".62" fill="#EAFBFF" opacity=".95"/>
-      </g></g>
-    </g>
+    <g class="lg-orb lg-orb--a"><g transform="rotate(-25 24 24)">
+      <ellipse cx="24" cy="24" rx="19.5" ry="8" fill="none" stroke="url(#bg)" stroke-width="1.1" stroke-dasharray="3 4" opacity=".8"/>
+      <circle cx="43.5" cy="24" r="1.9" fill="#22D3EE"/>
+    </g></g>
+    <g class="lg-orb lg-orb--b"><g transform="rotate(35 24 24)">
+      <ellipse cx="24" cy="24" rx="19.5" ry="8" fill="none" stroke="url(#bg)" stroke-width="1.1" stroke-dasharray="3 4" opacity=".8"/>
+      <circle cx="4.5" cy="24" r="1.9" fill="#6366F1"/>
+    </g></g>
+    <path d="M24 16.8 30.3 20.4v7.2L24 31.2l-6.3-3.6v-7.2Z" fill="none" stroke="url(#bg)" stroke-width="1.8" stroke-linejoin="round"/>
+    <circle cx="24" cy="24" r="2.1" fill="url(#bg)"/>
   </svg>`;
 
   const caret = `<svg class="nav__caret" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
@@ -41,13 +39,13 @@
       <div class="mega__grid">
         <div>
           <p class="mega__col-title" data-i18n="mega_products"></p>
-          ${ml("solutions/produits.html#cameleon-detection", "s_ikare", "s_ikare_d")}
-          ${ml("solutions/produits.html#cameleon-mill", "s_reveelium", "s_reveelium_d")}
-          ${ml("solutions/cameleon-soc.html", "s_cameleon", "s_cameleon_d")}
+          ${ml("solutions/produits.html#argus-detection", "s_ikare", "s_ikare_d")}
+          ${ml("solutions/produits.html#argus-mill", "s_reveelium", "s_reveelium_d")}
+          ${ml("solutions/argus-soc.html", "s_argus", "s_argus_d")}
           <p class="mega__col-title" data-i18n="mega_managed"></p>
-          ${ml("solutions/cameleon-soc.html#piliers", "s_soc", "s_soc_d")}
-          ${ml("solutions/cameleon-soc.html#piliers", "s_edr", "s_edr_d")}
-          ${ml("solutions/cameleon-soc.html#reponse", "s_csirt", "s_csirt_d")}
+          ${ml("solutions/argus-soc.html#piliers", "s_soc", "s_soc_d")}
+          ${ml("solutions/argus-soc.html#piliers", "s_edr", "s_edr_d")}
+          ${ml("solutions/argus-soc.html#reponse", "s_csirt", "s_csirt_d")}
         </div>
         <div>
           <p class="mega__col-title" data-i18n="mega_audit"></p>
@@ -162,8 +160,8 @@
           </div>
         </div>
         ${fcol("f_solutions", [
-          ["solutions/produits.html", "Cameleon Detection & Cameleon Mill", false],
-          ["solutions/cameleon-soc.html", "Cameleon SOC (MDR)", false],
+          ["solutions/produits.html", "ARGUS Detection & ARGUS Mill", false],
+          ["solutions/argus-soc.html", "ARGUS SOC (MDR)", false],
           ["solutions/audit.html", "Audit & Pentest", false],
           ["solutions/gouvernance.html", "Conseil & Conformité", false],
           ["solutions/formation.html", "SyberMad Academy", false],

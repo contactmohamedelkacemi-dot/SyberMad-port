@@ -261,3 +261,18 @@
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   LOGO « ARGUS » — Orbites (choix de Mad, option 5)
+   Deux orbites croisées animées autour d'un noyau hexagonal.
+   ============================================================ */
+.brand__mark .lg-orb,
+.splash__logo .lg-orb { transform-origin: 24px 24px; }
+.brand__mark .lg-orb--a,
+.splash__logo .lg-orb--a { animation: spinSlow 13s linear infinite; }
+.brand__mark .lg-orb--b,
+.splash__logo .lg-orb--b { animation: lgSpinRev 17s linear infinite; }
+@keyframes lgSpinRev { to { transform: rotate(-360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .brand__mark .lg-orb, .splash__logo .lg-orb { animation: none !important; }
+}
